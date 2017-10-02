@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp" >
+    <EditText
+        android:id="@+id/textEditVerb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:inputType="text"/>
+    <SeekBar
+        android:id="@+id/seekBar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:max="6"
+        android:progress="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textEditVerb"/>
+
+    <TextView
+        android:id="@+id/textViewTense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBar"
+        android:gravity="center"
+        android:padding="5dp"
+        android:textSize="40dp"
+        android:text="Tense" />
+
+    <TextView
+        android:id="@+id/textViewExample"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Example"
+        android:gravity="center"
+        android:layout_below="@+id/textViewTense"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textViewExample"
+        android:layout_marginTop="20dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:text="Yo"
+                android:padding="3dip" />
+            <TextView
+                android:id="@+id/textViewYo"
+                android:text="1. Person Singular"
+                android:padding="3dip"
+                android:textStyle="bold"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:text="Tu"
+                android:padding="3dip" />
+            <TextView
+                android:id="@+id/textViewTu"
+                android:text="2. Person Singular"
+                android:padding="3dip"
+                android:textStyle="bold"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:text="El/Ella/Usted"
+                android:padding="3dip" />
+            <TextView
+                android:id="@+id/textViewEl"
+                android:text="3. Person Singular"
+                android:padding="3dip"
+                android:textStyle="bold"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:text="Nosotros"
+                android:padding="3dip" />
+            <TextView
+                android:id="@+id/textViewNosotros"
+                android:text="1. Person Plural"
+                android:padding="3dip"
+                android:textStyle="bold"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:text="Vosotros"
+                android:padding="3dip" />
+            <TextView
+                android:id="@+id/textViewVosotros"
+                android:text="2. Person Plural"
+                android:padding="3dip"
+                android:textStyle="bold"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:text="Ellos/Ellas/Ustedes"
+                android:padding="3dip" />
+            <TextView
+                android:id="@+id/textViewEllos"
+                android:text="3. Person Plural"
+                android:padding="3dip"
+                android:textStyle="bold"/>
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>
