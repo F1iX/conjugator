@@ -1,12 +1,24 @@
 package me.keppler.conjugator;
 
+import android.content.Context;
+
 /**
  * Created by felix on 02/10/17.
  */
 
 public final class Present {
-    public static Conjugation get(String verb){
-        Conjugation forms = new Conjugation();
+    public static Conjugation get(String verb, Conjugation forms){
+        if(verb.length() < 2){
+            return forms; // no input, return default
+        } else if(verb.equals("ir")){
+            forms.Yo = "voy";
+            forms.Tu = "vas";
+            forms.El = "va";
+            forms.Nosotros = "vamos";
+            forms.Vosotros = "vais";
+            forms.Ellos = "van";
+            return forms;
+        }
 
         // comer = eat
         forms.Yo = verb.substring(0, verb.length()-2) + "o";
