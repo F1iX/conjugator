@@ -7,7 +7,8 @@ import android.content.Context;
  */
 
 public final class Present {
-    public static Conjugation get(String verb, Conjugation forms){
+    public static Conjugation get(String verb){
+        Conjugation forms = new Conjugation();
         if(verb.length() < 2){
             return forms; // no input, return default
         } else if(verb.equals("ir")){
