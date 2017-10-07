@@ -3,6 +3,7 @@ package me.keppler.conjugator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.Html;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
 import android.view.inputmethod.EditorInfo;
@@ -54,62 +55,80 @@ public class MainActivity extends AppCompatActivity {
 
     void conjugate(){
         String tense = "", example = "";
-        Conjugation forms;
+        String[] forms = {getString(R.string.s1)
+                , getString(R.string.s2)
+                , getString(R.string.s3)
+                , getString(R.string.p1)
+                , getString(R.string.p2)
+                , getString(R.string.p3)};
 
         switch (tenseId) {
             case 0:
                 tense = "Pretérito pluscuamperfecto";
                 example = "Yo había hablando = I had spoken";
-                forms = Present.get(verb);
+                if(verb.length() > 1) {
+                    //forms = Pluperfect.get(verb);
+                }
                 break;
             case 1:
                 tense = "Pretérito indefinido";
                 example = "Yo hablé = I spoke";
-                forms = Present.get(verb);
+                if(verb.length() > 1) {
+                    //forms = PreteriteIndefinido.get(verb);
+                }
                 break;
             case 2:
                 tense = "Pretérito imperfecto";
                 example = "Yo hablaba = I spoke";
-                forms = Present.get(verb);
+                if(verb.length() > 1) {
+                    //forms = Imperfect.get(verb);
+                }
                 break;
             case 3:
                 tense = "Pretérito perfecto";
                 example = "Yo he hablando = I have spoken";
-                forms = Present.get(verb);
+                if(verb.length() > 1) {
+                    forms = PresentPerfect.get(verb);
+                }
                 break;
             case 4:
                 tense = "Presente";
                 example = "Yo hablo = I speak";
-                forms = Present.get(verb);
+                if(verb.length() > 1) {
+                    forms = Present.get(verb);
+                }
                 break;
             case 5:
                 tense = "Futuro proximo";
-                example = "Yo voy a hablar = I am goint to speak";
-                forms = Present.get(verb);
+                example = "Yo voy a hablar = I am going to speak";
+                if(verb.length() > 1) {
+                    forms = GoingToFuture.get(verb);
+                }
                 break;
             case 6:
                 tense = "Futuro simple";
                 example = "Yo hablaré = I will speak";
-                forms = Present.get(verb);
+                if(verb.length() > 1) {
+                    //forms = Future.get(verb);
+                }
                 break;
             case 7:
                 tense = "Futuro perfecto";
                 example = "Yo habré hablando = I will have spoken";
-                forms = Present.get(verb);
-                break;
-            default:
-                forms = new Conjugation();
+                if(verb.length() > 1) {
+                    //forms = FuturePerfect.get(verb);
+                }
                 break;
         }
 
         ((TextView) findViewById(R.id.textViewTense)).setText(tense);
         ((TextView) findViewById(R.id.textViewExample)).setText(example);
 
-        ((TextView) findViewById(R.id.textViewYo)).setText(forms.Yo);
-        ((TextView) findViewById(R.id.textViewTu)).setText(forms.Tu);
-        ((TextView) findViewById(R.id.textViewEl)).setText(forms.El);
-        ((TextView) findViewById(R.id.textViewNosotros)).setText(forms.Nosotros);
-        ((TextView) findViewById(R.id.textViewVosotros)).setText(forms.Vosotros);
-        ((TextView) findViewById(R.id.textViewEllos)).setText(forms.Ellos);
+        ((TextView) findViewById(R.id.textViewYo)).setText(forms[0]);
+        ((TextView) findViewById(R.id.textViewTu)).setText(forms[1]);
+        ((TextView) findViewById(R.id.textViewEl)).setText(forms[2]);
+        ((TextView) findViewById(R.id.textViewNosotros)).setText(forms[3]);
+        ((TextView) findViewById(R.id.textViewVosotros)).setText(forms[4]);
+        ((TextView) findViewById(R.id.textViewEllos)).setText(forms[5]);
     }
 }
