@@ -22,30 +22,43 @@ public final class PresentPerfect {
             }
         }
 
-        if(verb.equals("abrir")){
-            pastParticiple = "abierto";
-        } else if(verb.equals("cubrir")){
-            pastParticiple = "cubierto";
-        } else if(verb.equals("decir")){
-            pastParticiple = "dicho";
-        } else if(verb.equals("escribir")){
-            pastParticiple = "escrito";
-        } else if(verb.equals("hacer")){
-            pastParticiple = "hecho";
-        } else if(verb.equals("imprimir")){
-            pastParticiple = "impreso";
-        } else if(verb.equals("morir")){
-            pastParticiple = "muerto";
-        } else if(verb.equals("poner")){
-            pastParticiple = "puesto";
-        } else if(verb.equals("resolver")){
-            pastParticiple = "resuelto";
-        } else if(verb.equals("romper")){
-            pastParticiple = "roto";
-        } else if(verb.equals("ver")){
-            pastParticiple = "visto";
-        } else if(verb.equals("volver")){
-            pastParticiple = "vuelto";
+        switch(verb){
+            case "abrir":
+                pastParticiple = "abierto";
+                break;
+            case "cubrir":
+                pastParticiple = "cubierto";
+                break;
+            case "decir":
+                pastParticiple = "dicho";
+                break;
+            case "escribir":
+                pastParticiple = "escrito";
+                break;
+            case "hacer":
+                pastParticiple = "hecho";
+                break;
+            case "imprimir":
+                pastParticiple = "impreso";
+                break;
+            case "morir":
+                pastParticiple = "muerto";
+                break;
+            case "poner":
+                pastParticiple = "puesto";
+                break;
+            case "resolver":
+                pastParticiple = "resuelto";
+                break;
+            case "romper":
+                pastParticiple = "roto";
+                break;
+            case "ver":
+                pastParticiple = "visto";
+                break;
+            case "volver":
+                pastParticiple = "vuelto";
+                break;
         }
         // get conjugation of auxiliary verb haber
          String[] forms = Present.get("haber");

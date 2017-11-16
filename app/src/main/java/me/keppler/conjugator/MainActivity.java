@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
                 tense = "Pretérito imperfecto";
                 example = "Yo hablaba = I spoke";
                 if(verb.length() > 1) {
-                    //forms = Imperfect.get(verb);
+                    forms = Imperfect.get(verb);
                 }
                 break;
             case 3:
@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
                 tense = "Futuro simple";
                 example = "Yo hablaré = I will speak";
                 if(verb.length() > 1) {
-                    //forms = Future.get(verb);
+                    forms = Future.get(verb);
                 }
                 break;
             case 7:
