@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Conjugator</string>
     <string name="s1">1. Person Singular</string>
-    <string name="s2">1. Person Singular</string>
-    <string name="s3">1. Person Singular</string>
+    <string name="s2">2. Person Singular</string>
+    <string name="s3">3. Person Singular</string>
     <string name="p1">1. Person Plural</string>
     <string name="p2">2. Person Plural</string>
     <string name="p3">3. Person Plural</string>
