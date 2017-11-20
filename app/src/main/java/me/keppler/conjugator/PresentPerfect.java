@@ -6,6 +6,19 @@ package me.keppler.conjugator;
 
 public final class PresentPerfect {
     public static String[] get(String verb) {
+        String pastParticiple = getPastParticiple(verb);
+        // get conjugation of auxiliary verb haber
+         String[] forms = Present.get("haber");
+
+        // build combined present perfect
+        for(int i = 0; i < forms.length; i++){
+            forms[i] = forms[i] + " " + pastParticiple;
+        }
+
+        return forms;
+    }
+
+    public static String getPastParticiple(String verb){
         String pastParticiple;
 
         if(verb.endsWith("ar")){ // trabajar -> trabajado
@@ -60,14 +73,6 @@ public final class PresentPerfect {
                 pastParticiple = "vuelto";
                 break;
         }
-        // get conjugation of auxiliary verb haber
-         String[] forms = Present.get("haber");
-
-        // build combined present perfect
-        for(int i = 0; i < forms.length; i++){
-            forms[i] = forms[i] + " " + pastParticiple;
-        }
-
-        return forms;
+        return pastParticiple;
     }
 }

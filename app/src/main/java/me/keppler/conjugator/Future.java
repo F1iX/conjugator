@@ -11,6 +11,20 @@ public final class Future {
     public static String[] get(String verb){
         String[] forms = new String[6];
 
+        verb = replaceExceptions(verb);
+
+        // hablar = to speak
+        forms[0] = verb + "é"; // Yo hablaré = I will speak
+        forms[1] = verb + "ás"; // Tu hablarás = You will speak
+        forms[2] = verb + "á"; // El hablará = He will speak
+        forms[3]  = verb + "emos"; // Nosotros hablaremos = We will speak
+        forms[4]  = verb + "éis"; // Vosotros hablaréis = You (group) will speak
+        forms[5]  = verb + "án"; // Ellos hablarán = They will speak
+
+        return forms;
+    }
+
+    public static String replaceExceptions(String verb){
         Map<String,String> exceptions = new HashMap<String,String>();
         exceptions.put("caber","cabr"); // Yo cabré = I will fit in
         exceptions.put("decir", "dir"); // Yo diré = I will speak
@@ -27,14 +41,6 @@ public final class Future {
 
         if(exceptions.containsKey(verb)) verb = exceptions.get(verb); // replace infinitive with exception if applicant
 
-        // hablar = to speak
-        forms[0] = verb + "é"; // Yo hablaré = I will speak
-        forms[1] = verb + "ás"; // Tu hablarás = You will speak
-        forms[2] = verb + "á"; // El hablará = He will speak
-        forms[3]  = verb + "emos"; // Nosotros hablaremos = We will speak
-        forms[4]  = verb + "éis"; // Vosotros hablaréis = You (group) will speak
-        forms[5]  = verb + "án"; // Ellos hablarán = They will speak
-
-        return forms;
+        return verb;
     }
 }

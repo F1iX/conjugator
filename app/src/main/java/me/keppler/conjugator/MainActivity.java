@@ -132,21 +132,21 @@ public class MainActivity extends AppCompatActivity {
                     tense = "Subjuntivo del presente";
                     example = "...que yo hablo = ...that I speak";
                     if (verb.length() > 1) {
-                        //forms = Present.get(verb);
+                        forms = SubPresent.get(verb);
                     }
                     break;
                 case 5:
                     tense = "Conditional";
                     example = "Yo hablaría = I would speak";
                     if (verb.length() > 1) {
-                        //forms = GoingToFuture.get(verb);
+                        forms = Conditional.get(verb);
                     }
                     break;
                 case 6:
                     tense = "Conditional perfect";
                     example = "Yo habría hablado = I would have spoken";
                     if (verb.length() > 1) {
-                        //forms = Future.get(verb);
+                        forms = ConditionalPerfect.get(verb);
                     }
                     break;
             }
