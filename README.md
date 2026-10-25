@@ -1,5 +1,6 @@
 # Spanish Conjugator
 ## Framework to conjugate Spanish verbs for learning purposes
+![Conjugator App](docs/conjugator.png)
 
 Being tired of learning grammar with pen and paper just right before the next exam, I started to write this Android app as a fun way to memorize the structure of Spanish grammar.
 
